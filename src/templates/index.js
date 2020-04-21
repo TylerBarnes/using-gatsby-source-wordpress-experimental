@@ -48,30 +48,23 @@ export default ({ data, pageContext }) => (
       ))}
     </Stack>
 
-    {pageContext && pageContext.totalPages > 3 && (
+    {pageContext && pageContext.totalPages > 1 && (
       <Box mt={10}>
         <ReactPaginate
           previousLabel={
-            pageContext &&
-            pageContext.page !== 1 && (
-              <Button>
-                <Link to={`/blog/${pageContext.page - 1}`}>Previous page</Link>
-              </Button>
-            )
+            pageContext?.page !== 1 && <Button>Previous page</Button>
           }
           nextLabel={
-            pageContext &&
-            pageContext.totalPages !== pageContext.page && (
-              <Button>
-                <Link to={`/blog/${pageContext.page + 1}`}>Next page</Link>
-              </Button>
+            pageContext?.totalPages !== pageContext.page && (
+              <Button>Next page</Button>
             )
           }
           onPageChange={({ selected }) => {
             const page = selected + 1
-            const path = page === 1 ? `/blog` : `/blog/${page}`
+            const path = page === 1 ? `/blog/` : `/blog/${page}/`
             navigate(path)
           }}
+          disableInitialCallback
           breakLabel={"..."}
           breakClassName={"break-me"}
           pageCount={pageContext.totalPages}
@@ -80,6 +73,7 @@ export default ({ data, pageContext }) => (
           containerClassName={"pagination"}
           subContainerClassName={"pages pagination"}
           activeClassName={"active"}
+          initialPage={pageContext.page - 1}
         />
       </Box>
     )}
