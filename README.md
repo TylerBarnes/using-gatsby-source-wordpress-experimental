@@ -2,6 +2,10 @@
 
 This starter uses an early alpha version of the upcoming `gatsby-source-wordpress@v4`. You can find rough documentation for that package [here](https://github.com/TylerBarnes/gatsby/blob/feat/source-wordpress-v4/packages/gatsby-source-wordpress-experimental/README.md).
 
+## Installation
+
+Follow along at the [alpha docs installation guide](https://github.com/TylerBarnes/gatsby/blob/feat/source-wordpress-v4/packages/gatsby-source-wordpress-experimental/README.md#installation).
+
 ## Known issues
 
 - This starter doesn't build it's Styled components properly
