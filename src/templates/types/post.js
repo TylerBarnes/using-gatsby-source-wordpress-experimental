@@ -18,12 +18,12 @@ export const query = graphql`
 
     nextPage: wpPost(id: { eq: $nextPage }) {
       title
-      link
+      uri
     }
 
     previousPage: wpPost(id: { eq: $previousPage }) {
       title
-      link
+      uri
     }
   }
 `
