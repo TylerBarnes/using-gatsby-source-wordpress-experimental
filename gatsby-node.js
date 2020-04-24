@@ -13,7 +13,7 @@ const getTemplates = () => {
 exports.createPages = async ({ actions, graphql }) => {
   const {
     data: { allWpContentType },
-  } = await graphql(`
+  } = await graphql(/* GraphQL */ `
     query ALL_CONTENT_TYPES {
       allWpContentType {
         nodes {
@@ -47,9 +47,10 @@ exports.createPages = async ({ actions, graphql }) => {
 
     const gatsbyNodeListFieldName = `allWp${nodesTypeName}`
 
-    const { data } = await graphql(`
+    const { data } = await graphql(/* GraphQL */ `
       query ALL_CONTENT_NODES {
-        ${gatsbyNodeListFieldName} {
+        # Note: this hacky string interpolation is here because our ContentNode interface isn't working properly in Gatsby
+        ${gatsbyNodeListFieldName} (sort: { fields: modifiedGmt order: DESC }) {
           nodes {
             uri
             id
@@ -78,7 +79,7 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   // create the homepage
-  const { data } = await graphql(`
+  const { data } = await graphql(/* GraphQL */ `
     {
       allWpPost(sort: { fields: date, order: DESC }) {
         nodes {
