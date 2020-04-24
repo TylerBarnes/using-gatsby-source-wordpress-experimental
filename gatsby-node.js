@@ -93,9 +93,10 @@ exports.createPages = async ({ actions, graphql }) => {
   const chunkedContentNodes = chunk(data.allWpPost.nodes, perPage)
 
   await Promise.all(
-    chunkedContentNodes.map(async (nodesChunk, i) => {
+    chunkedContentNodes.map(async (nodesChunk, index) => {
       const firstNode = nodesChunk[0]
-      const page = i + 1
+      const page = index + 1
+      const offset = perPage * index
 
       await actions.createPage({
         component: resolve(`./src/templates/index.js`),
@@ -103,8 +104,8 @@ exports.createPages = async ({ actions, graphql }) => {
         context: {
           firstId: firstNode.id,
           page: page,
-          offset: perPage * page,
-          totalPages: chunkedContentNodes.length - 1,
+          offset: offset,
+          totalPages: chunkedContentNodes.length,
           perPage,
         },
       })
