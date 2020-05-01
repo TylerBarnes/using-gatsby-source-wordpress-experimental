@@ -9,7 +9,6 @@ require("dotenv").config({
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-notifications`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
