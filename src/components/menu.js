@@ -31,8 +31,8 @@ export default () => {
             const path = menuItem?.connectedObject?.uri ?? menuItem.url
 
             return (
-              <Link style={{ display: `block` }} to={normalizePath(path)}>
-                <Button w="100%" key={i + menuItem.url} as={Button}>
+              <Link key={i + menuItem.url} style={{ display: `block` }} to={normalizePath(path)}>
+                <Button w="100%" as={Button}>
                   {menuItem.label}
                 </Button>
               </Link>
