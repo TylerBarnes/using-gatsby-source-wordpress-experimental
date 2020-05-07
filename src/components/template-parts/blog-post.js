@@ -7,7 +7,7 @@ import Layout from "../../components/layout"
 import { normalizePath } from "../../utils/get-url-path"
 
 function BlogPost({ data }) {
-  const { nextPage, previousPage, page } = data
+  const { nextPage, previousPage, page } = { ...data }
   const { title, content, featuredImage } = page
 
   return (
