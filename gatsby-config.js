@@ -48,6 +48,12 @@ module.exports = {
             onlyReportCriticalErrors: true,
           },
         },
+        auth: {
+          htaccess: {
+            username: null,
+            password: null,
+          },
+        },
         // fields can be excluded globally.
         // this example is for wp-graphql-gutenberg.
         // since we can get block data on the `block` field
