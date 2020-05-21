@@ -2,6 +2,7 @@ const { resolve } = require(`path`)
 const path = require(`path`)
 const glob = require(`glob`)
 const chunk = require(`lodash/chunk`)
+const { dd } = require(`dumper.js`)
 
 const getTemplates = () => {
   const sitePath = path.resolve(`./`)
@@ -33,7 +34,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   `)
 
   const contentTypeTemplateDirectory = `./src/templates/single/`
-  const contentTypeTemplates = templates.filter(path =>
+  const contentTypeTemplates = templates.filter((path) =>
     path.includes(contentTypeTemplateDirectory)
   )
 
@@ -46,10 +47,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       const templatePath = `${contentTypeTemplateDirectory}${nodeType}.js`
 
       const contentTypeTemplate = contentTypeTemplates.find(
-        path => path === templatePath
+        (path) => path === templatePath
       )
 
       if (!contentTypeTemplate) {
+        dd(node)
         reporter.log(``)
         reporter.log(``)
         reporter.panic(

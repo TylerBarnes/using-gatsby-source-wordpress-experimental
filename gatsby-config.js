@@ -20,7 +20,9 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `https://dev-gatsby-source-wordpress-v4.pantheonsite.io/?graphql`,
+        url:
+          process.env.WPGRAPHQL_URL ||
+          `https://dev-gatsby-source-wordpress-v4.pantheonsite.io/graphql`,
         verbose: true,
         schema: {
           queryDepth: 5,
