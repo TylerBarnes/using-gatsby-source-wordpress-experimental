@@ -1,8 +1,10 @@
 import React from "react"
+// import { DoAction } from "gatsby-plugin-wordpress/do-action"
 
 import { Link } from "gatsby"
 import { Box, Heading } from "@chakra-ui/core"
 import Img from "gatsby-image"
+
 import Layout from "../../components/layout"
 import { normalizePath } from "../../utils/get-url-path"
 
@@ -14,6 +16,7 @@ function BlogPost({ data }) {
     <Layout>
       <Heading as="h1" size="xl" mb={5}>
         {title}
+        {/* <DoAction name="after-title" /> */}
       </Heading>
 
       {!!featuredImage &&
