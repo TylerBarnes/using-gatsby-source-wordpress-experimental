@@ -8,6 +8,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+  pathPrefix: process.env.PATH_PREFIX,
   plugins: [
     `gatsby-plugin-sharp`,
     {
@@ -18,7 +19,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-wordpress-experimental`,
+      resolve: require.resolve(`../gatsby-theme-wordpress`),
+    },
+    {
+      resolve: require.resolve(`../gatsby-plugin-wordpress/package.json`),
       options: {
         url:
           process.env.WPGRAPHQL_URL ||
@@ -28,6 +32,7 @@ module.exports = {
           queryDepth: 5,
           typePrefix: `Wp`,
           timeout: 30000,
+          // perPage: 10,
         },
         develop: {
           nodeUpdateInterval: 3000,
@@ -35,6 +40,9 @@ module.exports = {
         },
         production: {
           hardCacheMediaFiles: false,
+        },
+        html: {
+          useGatsbyImage: false,
         },
         debug: {
           // these settings are all the defaults,
@@ -46,7 +54,9 @@ module.exports = {
             panicOnError: true,
             // a critical error is a WPGraphQL query that returns an error and no response data. Currently WPGQL will error if we try to access private posts so if this is false it returns a lot of irrelevant errors.
             onlyReportCriticalErrors: true,
+            writeQueriesToDisk: true,
           },
+          disableCompatibilityCheck: true,
         },
         auth: {
           htaccess: {
@@ -60,6 +70,9 @@ module.exports = {
         // we don't need these fields
         excludeFieldNames: [`blocksJSON`, `saveContent`],
         type: {
+          __all: {
+            limit: 50,
+          },
           Post: {
             limit:
               process.env.NODE_ENV === `development`
