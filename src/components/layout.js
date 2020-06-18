@@ -13,7 +13,9 @@ const Layout = ({ children }) => (
       </Box>
       <Menu />
 
-      <Box mb={100}>{children}</Box>
+      <Box style={{ maxWidth: `100%`, overflowX: `hidden` }} mb={100}>
+        {children}
+      </Box>
     </Grid>
   </div>
 )
