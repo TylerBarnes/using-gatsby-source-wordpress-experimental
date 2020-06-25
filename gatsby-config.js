@@ -28,6 +28,9 @@ module.exports = {
           // cache is cleared
           hardCacheMediaFiles: true,
         },
+        production: {
+          hardCacheMediaFiles: false,
+        },
         debug: {
           graphql: {
             // writes internal data sourcing gql queries to
