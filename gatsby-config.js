@@ -31,7 +31,7 @@ module.exports = {
         },
         develop: {
           nodeUpdateInterval: 3000,
-          hardCacheMediaFiles: false,
+          hardCacheMediaFiles: true,
         },
         production: {
           hardCacheMediaFiles: false,
