@@ -19,13 +19,11 @@ function BlogPost({ data }) {
         {/* <DoAction name="after-title" /> */}
       </Heading>
 
-      {!!featuredImage &&
-        featuredImage.remoteFile &&
-        featuredImage.remoteFile.childImageSharp && (
-          <Box mb={5}>
-            <Img fluid={featuredImage.remoteFile.childImageSharp.fluid} />
-          </Box>
-        )}
+      {!!featuredImage?.node?.remoteFile?.childImageSharp && (
+        <Box mb={5}>
+          <Img fluid={featuredImage.node.remoteFile.childImageSharp.fluid} />
+        </Box>
+      )}
 
       <p dangerouslySetInnerHTML={{ __html: content }} />
 

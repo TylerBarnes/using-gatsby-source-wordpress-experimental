@@ -11,21 +11,19 @@ import { normalizePath } from "../utils/get-url-path"
 export default ({ data, pageContext }) => (
   <Layout>
     <Stack spacing={5}>
-      {data.allWpPost.nodes.map(page => (
+      {data.allWpPost.nodes.map((page) => (
         <Box key={page.link}>
           <Link to={normalizePath(page.uri)}>
             <Box p={5} shadow="md" borderWidth="1px">
               <Grid templateColumns="1fr 2fr" gap={6}>
                 <Box>
-                  {!!page.featuredImage &&
-                    !!page.featuredImage.remoteFile &&
-                    !!page.featuredImage.remoteFile.childImageSharp && (
-                      <Img
-                        fluid={
-                          page.featuredImage.remoteFile.childImageSharp.fluid
-                        }
-                      />
-                    )}
+                  {!!page?.featuredImage?.node?.remoteFile?.childImageSharp && (
+                    <Img
+                      fluid={
+                        page.featuredImage.node.remoteFile.childImageSharp.fluid
+                      }
+                    />
+                  )}
                 </Box>
                 <Box>
                   <Heading as="h2" size="md">
@@ -100,8 +98,10 @@ export const query = graphql`
         uri
         title
         featuredImage {
-          remoteFile {
-            ...Thumbnail
+          node {
+            remoteFile {
+              ...Thumbnail
+            }
           }
         }
       }

@@ -12,9 +12,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    // {
-    //   resolve: require.resolve(`../gatsby-theme-wordpress`),
-    // },
     {
       resolve: require.resolve(`../gatsby-plugin-wordpress/package.json`),
       options: {
@@ -27,9 +24,6 @@ module.exports = {
           // that means you wont have to ever download images twice if the
           // cache is cleared
           hardCacheMediaFiles: true,
-        },
-        production: {
-          hardCacheMediaFiles: false,
         },
         debug: {
           graphql: {
