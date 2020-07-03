@@ -35,28 +35,18 @@ module.exports = {
         type: {
           __all: {
             limit: 10,
-            routes: {
-              single: true,
-              archive: false,
-            },
           },
-          MediaItem: {
-            routes: {
-              single: false,
-              archive: false,
-            },
-          },
-          User: {
-            routes: {
-              single: false,
-              archive: false,
-            },
-          },
-          Post: {
-            limit: process.env.NODE_ENV === `development` ? 50 : 5000,
+          ContentNode: {
             routes: {
               archive: true,
             },
+          },
+          Post: {
+            routes: {
+              // archive: false,
+              archivePathBase: `blog`,
+            },
+            limit: process.env.NODE_ENV === `development` ? 50 : 5000,
           },
         },
       },

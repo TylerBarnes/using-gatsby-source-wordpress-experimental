@@ -6,14 +6,13 @@ import ReactPaginate from "react-paginate"
 import { Stack, Box, Heading, Text, Grid, Button } from "@chakra-ui/core"
 
 import Layout from "../components/layout"
-import { normalizePath } from "../utils/get-url-path"
 
 export default ({ data, pageContext }) => (
   <Layout>
     <Stack spacing={5}>
       {data.allWpPost.nodes.map((page) => (
         <Box key={page.link}>
-          <Link to={normalizePath(page.uri)}>
+          <Link to={page.uri}>
             <Box p={5} shadow="md" borderWidth="1px">
               <Grid templateColumns="1fr 2fr" gap={6}>
                 <Box>

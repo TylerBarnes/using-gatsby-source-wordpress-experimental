@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Menu, Button, Grid, Box } from "@chakra-ui/core"
-import { normalizePath } from "../utils/get-url-path"
 
 export default () => {
   const { wpMenu } = useStaticQuery(graphql`
@@ -39,7 +38,7 @@ export default () => {
               <Link
                 key={i + menuItem.url}
                 style={{ display: `block` }}
-                to={normalizePath(path)}
+                to={path}
               >
                 <Button w="100%" as={Button}>
                   {menuItem.label}
