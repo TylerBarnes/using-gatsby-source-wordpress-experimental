@@ -1,12 +1,10 @@
 import React from "react"
-// import { DoAction } from "gatsby-plugin-wordpress/do-action"
 
 import { Link } from "gatsby"
 import { Box, Heading } from "@chakra-ui/core"
 import Img from "gatsby-image"
 
 import Layout from "../../components/layout"
-import { normalizePath } from "../../utils/get-url-path"
 
 function BlogPost({ data }) {
   const { nextPage, previousPage, page } = data
@@ -16,7 +14,6 @@ function BlogPost({ data }) {
     <Layout>
       <Heading as="h1" size="xl" mb={5}>
         {title}
-        {/* <DoAction name="after-title" /> */}
       </Heading>
 
       {!!featuredImage?.node?.remoteFile?.childImageSharp && (
@@ -28,14 +25,10 @@ function BlogPost({ data }) {
       <p dangerouslySetInnerHTML={{ __html: content }} />
 
       <br />
-      {!!nextPage && (
-        <Link to={normalizePath(nextPage.uri)}>Next: {nextPage.title}</Link>
-      )}
+      {!!nextPage && <Link to={nextPage.uri}>Next: {nextPage.title}</Link>}
       <br />
       {!!previousPage && (
-        <Link to={normalizePath(previousPage.uri)}>
-          Previous: {previousPage.title}
-        </Link>
+        <Link to={previousPage.uri}>Previous: {previousPage.title}</Link>
       )}
     </Layout>
   )
