@@ -4,7 +4,7 @@ This starter uses an early alpha version of the upcoming `gatsby-source-wordpres
 
 ## Installation
 
-Follow along at the [alpha docs installation guide](https://github.com/gatsbyjs/gatsby-source-wordpress-experimental#installation).
+Follow along at the [alpha docs installation guide](https://github.com/gatsbyjs/gatsby-source-wordpress-experimental/blob/master/docs/getting-started.md#quick-start).
 
 ## Known issues
 
