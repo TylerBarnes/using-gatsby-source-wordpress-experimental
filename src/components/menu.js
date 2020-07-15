@@ -13,9 +13,11 @@ export default () => {
             label
             url
             parentId
-            connectedObject {
-              ... on WpContentNode {
-                uri
+            connectedNode {
+              node {
+                ... on WpContentNode {
+                  uri
+                }
               }
             }
           }
@@ -33,7 +35,7 @@ export default () => {
               return null
             }
 
-            const path = menuItem?.connectedObject?.uri ?? menuItem.url
+            const path = menuItem?.connectedNode?.node?.uri ?? menuItem.url
 
             return (
               <Link
