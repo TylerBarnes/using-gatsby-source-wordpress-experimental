@@ -27,7 +27,7 @@ function BlogPost({ data }) {
       <br />
       {!!nextPage && <Link to={nextPage.uri}>Next: {nextPage.title}</Link>}
       <br />
-      {!!previousPage && (
+      {!!previousPage?.uri && (
         <Link to={previousPage.uri}>Previous: {previousPage.title}</Link>
       )}
     </Layout>

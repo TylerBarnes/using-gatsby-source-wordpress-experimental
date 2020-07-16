@@ -5,22 +5,22 @@ import { graphql } from "gatsby"
 export default ({ pageContext, data }) => (
   <>
     {data.allWpPost.nodes.map((node) => (
-      <div>
+      <div key={`${node.uri}+${node.title}`}>
         <Link to={node.uri}>{node.title}</Link>
       </div>
     ))}
-    {!pageContext.isFirst ? (
+    {!pageContext.isFirst && pageContext.previousPagePath ? (
       <Link to={pageContext.previousPagePath}>previous</Link>
     ) : null}
-    {!pageContext.isLast ? (
+    {!pageContext.isLast && pageContext.nextPagePath ? (
       <Link to={pageContext.nextPagePath}>next</Link>
     ) : null}
   </>
 )
 
 export const query = graphql`
-  query PostArchive($offset: Int!, $perPage: Int!) {
-    allWpPost(skip: $offset, limit: $perPage) {
+  query PostArchive($archiveOffset: Int!, $perPage: Int!) {
+    allWpPost(skip: $archiveOffset, limit: $perPage) {
       nodes {
         title
         uri
