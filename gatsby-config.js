@@ -38,7 +38,7 @@ module.exports = {
           },
           Post: {
             routes: {
-              archivePathBase: `blog`,
+              // archivePathBase: `blog`,
               perPage: 2,
               archive: true,
             },
@@ -50,8 +50,14 @@ module.exports = {
               archive: true,
             },
           },
+          Team: {
+            routes: {
+              single: false,
+            },
+          },
           MediaItem: {
             routes: {
+              archivePathBase: `pictures`,
               archive: true,
             },
           },
