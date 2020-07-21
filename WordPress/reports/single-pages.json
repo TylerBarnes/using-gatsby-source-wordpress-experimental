@@ -1,0 +1,213 @@
+{
+  "reportType": "Single page report",
+  "rejected": {
+    "MediaItem": [
+      {
+        "template": null,
+        "id": "cG9zdDo0MDg0",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/arizona-fields-navigate-projection-withdrawal-egyptian-pound-coherent/8091478402_6b7be9a434_o/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MDkw",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/aruban-guilder-digital-money-market-account/127995729_ed28551e70_o/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MDg4",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/bandwidth-handcrafted-road-ftp/4501515893_59fc354a8d_o/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MDk4",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/borders-driver-avon-process-improvement/8583150902_d0f1e51c51_o/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MDky",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/card-hryvnia-best-of-breed/olympus-digital-camera-77/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MDgy",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/operations-avon-front-line-web-services-usability-incredible-cotton-chair/7842594972_3125b00ca4_o/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MTAw",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/payment-concrete-sports/4433708213_2190fa3508_o/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MDk2",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/plastic-ouguiya-open-source/16327853902_86758dc7db_o/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MDk0",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/real-time-e-services-functionality-personal-loan-account-delaware/4292398675_17b51c5cc6_o/"
+      },
+      {
+        "template": null,
+        "id": "cG9zdDo0MDg2",
+        "type": "MediaItem",
+        "kind": "single",
+        "reason": "No matching template exists.",
+        "status": "Rejected",
+        "path": "/2020/03/13/savings-account-multi-byte-copying-tenge-european-unit-of-account-17e-u-a-17/2673734488_008d5d5459_o/"
+      }
+    ],
+    "PostFormat": [
+      {
+        "template": null,
+        "id": null,
+        "type": "PostFormat",
+        "kind": "single",
+        "reason": "This node type doesn't exist in the Gatsby schema.",
+        "status": "Rejected",
+        "path": "/type/"
+      }
+    ]
+  },
+  "accepted": {
+    "Post": [
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDgz",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/arizona-fields-navigate-projection-withdrawal-egyptian-pound-coherent/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDg5",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/aruban-guilder-digital-money-market-account/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDg3",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/bandwidth-handcrafted-road-ftp/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDk3",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/borders-driver-avon-process-improvement/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDkx",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/card-hryvnia-best-of-breed/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDgx",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/operations-avon-front-line-web-services-usability-incredible-cotton-chair/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDk5",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/payment-concrete-sports/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDk1",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/plastic-ouguiya-open-source/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDkz",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/real-time-e-services-functionality-personal-loan-account-delaware/"
+      },
+      {
+        "template": "./src/wp-templates/single/ContentNode.js",
+        "id": "cG9zdDo0MDg1",
+        "type": "Post",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/2020/03/13/savings-account-multi-byte-copying-tenge-european-unit-of-account-17e-u-a-17/"
+      }
+    ],
+    "Category": [
+      {
+        "template": "./src/wp-templates/single/TermNode.js",
+        "id": "dGVybTox",
+        "type": "Category",
+        "kind": "single",
+        "reason": "Page was created with template.",
+        "status": "Accepted",
+        "path": "/category/uncategorized/"
+      }
+    ]
+  }
+}

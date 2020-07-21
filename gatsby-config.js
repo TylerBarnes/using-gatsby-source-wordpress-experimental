@@ -32,35 +32,47 @@ module.exports = {
             writeQueriesToDisk: true,
           },
         },
+        schema: {
+          timeout: 60000,
+        },
+        reports: {
+          templateRouting: true,
+        },
         type: {
-          __all: {
-            limit: 10,
-          },
+          // __all: {
+          //   limit: 10,
+          // },
           Post: {
-            routes: {
-              // archivePathBase: `blog`,
-              perPage: 2,
-              archive: true,
+            archive: {
+              sortFields: `slug`,
+              sortOrder: `ASC`,
+              perPage: 3,
             },
-            limit: process.env.NODE_ENV === `development` ? 50 : 5000,
+            // pages: {
+            //   // archivePathBase: `blog`,
+            //   perPage: 5,
+            //   archive: true,
+            // },
+            // limit: process.env.NODE_ENV === `development` ? 50 : 5000,
+            limit: 512,
           },
-          User: {
-            routes: {
-              single: true,
-              archive: true,
-            },
-          },
-          Team: {
-            routes: {
-              single: false,
-            },
-          },
-          MediaItem: {
-            routes: {
-              archivePathBase: `pictures`,
-              archive: true,
-            },
-          },
+          // User: {
+          //   pages: {
+          //     single: true,
+          //     archive: true,
+          //   },
+          // },
+          // Team: {
+          //   pages: {
+          //     single: false,
+          //   },
+          // },
+          // MediaItem: {
+          //   pages: {
+          //     archivePathBase: `pictures`,
+          //     archive: true,
+          //   },
+          // },
         },
       },
     },

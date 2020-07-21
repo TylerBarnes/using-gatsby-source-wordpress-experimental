@@ -19,11 +19,18 @@ export default ({ pageContext, data }) => (
 )
 
 export const query = graphql`
-  query PostArchive($archiveOffset: Int!, $perPage: Int!) {
-    allWpPost(skip: $archiveOffset, limit: $perPage) {
+  query PostArchive(
+    $archiveNodeIds: [String]!
+    $sortOrder: [SortOrderEnum]!
+    $sortFields: [WpPostFieldsEnum]!
+  ) {
+    allWpPost(
+      filter: { id: { in: $archiveNodeIds } }
+      sort: { order: $sortOrder, fields: $sortFields }
+    ) {
       nodes {
-        title
         uri
+        title
       }
     }
   }

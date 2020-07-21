@@ -28,11 +28,9 @@ export default (props) => {
         <Heading>{data.wpContentNode.title}</Heading>
       )}
 
-      {console.log(data)}
-
       <Stack spacing={5}>
         {data?.allWpContentNode?.nodes?.map((page) => (
-          <Box key={page.link}>
+          <Box key={page.id}>
             <Link to={page.uri}>
               <Box p={5} shadow="md" borderWidth="1px">
                 <Grid templateColumns="1fr 2fr" gap={6}>
@@ -113,25 +111,22 @@ export const query = graphql`
   }
 
   query DefaultArchive(
-    $archiveOffset: Int!
-    $perPage: Int!
-    $archiveNodeType: String!
-    $id: String!
-    $isArchive: Boolean!
-    $isSingle: Boolean!
+    $archiveNodeIds: [String]!
+    $sortOrder: [SortOrderEnum]!
+    $sortFields: [WpContentNodeFieldsEnum]!
+    $id: String
   ) {
-    wpContentNode(id: { eq: $id }) @include(if: $isSingle) {
+    wpContentNode(id: { eq: $id }) {
       ... on WpNodeWithTitle {
         title
       }
     }
     allWpContentNode(
-      limit: $perPage
-      skip: $archiveOffset
-      sort: { fields: date, order: DESC }
-      filter: { nodeType: { eq: $archiveNodeType } }
-    ) @include(if: $isArchive) {
+      filter: { id: { in: $archiveNodeIds } }
+      sort: { order: $sortOrder, fields: $sortFields }
+    ) {
       nodes {
+        id
         uri
         ... on WpNodeWithTitle {
           title
