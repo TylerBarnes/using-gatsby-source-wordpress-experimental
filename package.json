@@ -30,7 +30,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.6.19",
     "gatsby-source-filesystem": "^2.3.7",
-    "gatsby-source-wordpress-experimental": "1.0.7",
+    "gatsby-source-wordpress-experimental": "^1.0.7",
     "gatsby-transformer-sharp": "2.5.11",
     "gatsby-wordpress-experimental-inline-images": "^0.0.3",
     "react": "^16.13.1",
