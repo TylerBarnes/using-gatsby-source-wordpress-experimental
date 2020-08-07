@@ -51,16 +51,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       )
 
       if (!contentTypeTemplate) {
-        dd(node)
-        reporter.log(``)
-        reporter.log(``)
-        reporter.panic(
-          `[using-gatsby-source-wordpress] No template found at ${templatePath}\nfor single ${nodeType} ${
-            node.id
-          } with path ${
-            node.uri
-          }\n\nAvailable templates:\n${contentTypeTemplates.join(`\n`)}`
-        )
+        return
       }
 
       await actions.createPage({
