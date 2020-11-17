@@ -1,4 +1,6 @@
-# gatsby-source-wordpress V4 (alpha) starter
+# [ARCHIVED] gatsby-source-wordpress V4 (alpha) starter
+
+This starter has been archived. Please visit the [source plugin quick start](https://github.com/gatsbyjs/gatsby-source-wordpress-experimental/blob/master/docs/getting-started.md#quick-start) to find an official Gatsby WP starter. 
 
 This starter uses an early alpha version of the upcoming `gatsby-source-wordpress@v4`. You can find rough documentation for that package [here](https://github.com/gatsbyjs/gatsby-source-wordpress-experimental).
 
